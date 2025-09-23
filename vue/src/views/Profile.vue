@@ -58,7 +58,7 @@
                   <div class="info-value">XXX</div>
                 </div>
               </div>
-             
+
             </div>
           </div>
 
@@ -610,7 +610,6 @@ height: 275px;
 }
 
 .user-meta {
-  font-size: 2cap;
   color: #666;
   position: relative;
   top: 34px;
@@ -784,7 +783,7 @@ height: 275px;
   border: 1px solid #eaeaea;
   width: 1370px;
   height: 450px;
-  
+
 }
 
 .section-header {
