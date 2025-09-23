@@ -134,7 +134,7 @@ export default {
 <style scoped>
 .content-wrapper {
   flex: 1;
-  background-color: #fff;
+  background-color: #F4F5FA;
   padding: 20px;
   border-radius: 20px;
   overflow-y: auto;
@@ -167,13 +167,13 @@ header {
 }
 
 .header-title img {
-  width: 3.5rem;
-  height: 3.5rem;
+  width: 3.5vw;
+  height: 3.5vw;
   margin-right: 1rem;
 }
 
 .header-title h1 {
-  font-size: 36px;
+  font-size: 2.25rem;
   font-weight: 600;
   color: #1f2937;
 }
@@ -184,7 +184,7 @@ header {
   border: none;
   border-radius: 999px;
   padding: 0.5rem 1rem;
-  font-size: 32px;
+  font-size: 2rem;
   display: flex;
   align-items: center;
   cursor: pointer;
@@ -196,8 +196,8 @@ header {
 }
 
 .discover-btn img {
-  width: 2rem;
-  height: 2rem;
+  width: 2vw;
+  height: 2vw;
   margin-right: 0.8rem;
 }
 
@@ -209,10 +209,10 @@ header {
   row-gap: 2rem;
   margin-bottom: 1rem;
   flex: 1;
-  min-height: 700px;
+  min-height: 50vh;
   padding: 0 0.5rem;
   position: relative;
-  left: -10px;
+  left: -0.6%;
 }
 
 .card {
@@ -223,8 +223,8 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-height: 320px;
-  width: 694px;
+  min-height: 20vh;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -252,8 +252,8 @@ header {
 }
 
 .card-header img {
-  width: 4rem;
-  height: 4rem;
+  width: 4vw;
+  height: 4vw;
   margin-right: 1rem;
   background-color: white;
   border-radius: 0.8rem;
@@ -261,13 +261,13 @@ header {
 }
 
 .card-header h3 {
-  font-size: 32px;
+  font-size: 2rem;
   font-weight: 600;
   color: #1f2937;
 }
 
 .card-description {
-  font-size: 25px;
+  font-size: 1.56rem;
   color: #6b7280;
   line-height: 1.6;
   flex: 1;
@@ -290,7 +290,7 @@ header {
   border: 2px solid rgba(206, 206, 206, 1);
   border-radius: 1.8rem;
   padding: 0.9rem 1.2rem;
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: 500;
   display: flex;
   align-items: center;
@@ -305,7 +305,7 @@ header {
 }
 
 .card-button span {
-  font-size: 26px;
+  font-size: 1.625rem;
   margin-right: 8px;
 }
 
@@ -316,8 +316,8 @@ header {
 }
 
 .card-button .svg-icon svg {
-  width: 26px;
-  height: 26px;
+  width: 1.625rem;
+  height: 1.625rem;
 }
 
 .card-button:hover {
@@ -335,14 +335,14 @@ header {
 }
 
 .finance-title img {
-  width: 3.5rem;
-  height: 3.5rem;
+  width: 3.5vw;
+  height: 3.5vw;
   margin-right: 1rem;
   border-radius: 0.8rem;
 }
 
 .finance-title h2 {
-  font-size: 36px;
+  font-size: 2.25rem;
   font-weight: 600;
   color: #1f2937;
 }
@@ -356,10 +356,10 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-height: 320px;
- width: 694px;
-  max-width: 45%;
-  margin-top: 30px;
+  min-height: 18vh;
+  width: 32%!important;
+  max-width: 40%;
+  margin-top: 2rem;
 }
 
 .finance-card:hover {
@@ -374,8 +374,8 @@ header {
 }
 
 .finance-card .card-header img {
-  width: 4rem;
-  height: 4rem;
+  width: 4vw;
+  height: 4vw;
   margin-right: 1rem;
   background-color: white;
   border-radius: 0.8rem;
@@ -383,13 +383,13 @@ header {
 }
 
 .finance-card .card-header h3 {
-  font-size: 32px;
+  font-size: 2rem;
   font-weight: 600;
   color: #1f2937;
 }
 
 .finance-card .card-description {
-  font-size: 25px;
+  font-size: 1.56rem;
   color: #6b7280;
   line-height: 1.6;
   flex: 1;
@@ -412,7 +412,7 @@ header {
   border: 2px solid rgba(206, 206, 206, 1);
   border-radius: 1.8rem;
   padding: 0.9rem 1.2rem;
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: 500;
   display: flex;
   align-items: center;

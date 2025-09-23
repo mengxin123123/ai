@@ -28,7 +28,7 @@
           <i class="nav-icon collection-icon"></i>
           <span style="font-size: 30px;">我的收藏</span>
         </div>
-        <div class="nav-item" :class="{ active: activeTab === 'account' }" @click="navigateTo('/account', 'account')">
+        <div class="nav-item" :class="{ active: activeTab === 'account' }" @click="navigateTo('/account-info', 'account')">
           <i class="nav-icon account-icon"></i>
           <span style="font-size: 30px;">账户信息</span>
         </div>
@@ -109,7 +109,7 @@ export default {
 /* 左侧导航栏样式 */
 .left-sidebar {
   width: 500px;
-  height: 1370px;
+  height: calc(100vh - 100px);
   background-color: #fff;
   padding: 20px 0;
   display: flex;
@@ -276,7 +276,7 @@ export default {
 .main-content {
   flex: 1;
   padding: 40px;
-  background-color: #fff;
+  background-color: #F4F5FA;
   margin: 20px;
   margin-left: 550px;
   margin-right: 70px;
@@ -284,7 +284,7 @@ export default {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
   position: relative;
   z-index: 1;
-  height: 1370px;
+  height: calc(100vh - 100px);
   overflow: hidden;
   width: 1600px !important;
   top: -10px;
