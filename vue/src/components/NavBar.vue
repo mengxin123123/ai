@@ -68,7 +68,7 @@ export default {
 .nav-bar {
   display: flex;
   align-items: center; /* 确保所有子元素垂直居中 */
-  padding: 18px 60px;
+
   background: rgba(255,255,255,0.98);
   box-shadow: 0 2px 10px rgba(0,0,0,0.05);
   position: fixed;
@@ -76,24 +76,28 @@ export default {
   left: 0;
   right: 0;
   z-index: 100;
-  height: 80px; /* 增加导航栏高度 */
+  height: 74px; /* 增加导航栏高度 */
 }
 
 .logo {
   display: flex;
   align-items: center;
   position: relative;
-  left: 360px;
+  left: 240px;
 }
 
 .logo img {
-  height: 60px; /* 增大logo大小 */
+  height: 45px; /* 增大logo大小 */
 }
 
 .nav-items {
   display: flex;
   align-items: center; /* 确保文本项垂直居中 */
   gap: 80px;
+  font-size:20px;
+
+
+  
   margin: 0 auto;
 }
 

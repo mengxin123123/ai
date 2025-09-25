@@ -305,7 +305,7 @@ export default {
         {
           title: '站内运营',
           cards: [
-            { title: '智能写作', content: '自动生成高质量文档', hot: true ,image: require('D:\\vue\\代码\\first1\\vue\\src\\views\\photos\\图片 3.jpeg')},
+            { title: '智能写作', content: '自动生成高质量文档', hot: true ,image: require('./photos/img3.jpeg')},
             { title: '数据分析', content: '多维度数据可视化分析' },
             { title: '图像处理', content: 'AI智能图像增强' },
             { title: '语音合成', content: '自然语音生成引擎' }
@@ -370,13 +370,13 @@ export default {
         {
           title: '',
           content: '智能刀具匹配系统',
-          image: require('D:\\vue\\代码\\first1\\vue\\src\\views\\photos\\图片 3.jpeg'),
+          image: require('./photos/img3.jpeg'),
           path: '/knife-ai'
         },
         {
           title: '',
           content: '智能赛事管理平台',
-          image: require('D:\\vue\\代码\\first1\\vue\\src\\views\\photos\\图片 3.jpeg'),
+          image: require('./photos/img3.jpeg'),
           path: '/match-system'
         },
       ],
