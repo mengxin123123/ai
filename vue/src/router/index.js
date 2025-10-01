@@ -9,7 +9,8 @@ import AiAssistant from '../views/AiAssistant.vue'
 import Profile from '../views/Profile.vue'
 import Assistant from '../views/Assistant.vue'
 import Wallet from '../views/Wallet.vue'
-// import AccountInfo from '../views/AccountInfo.vue'
+import AccountInfo from '../views/AccountInfo.vue'
+import MyCollection from '../views/MyCollection.vue'
 
 Vue.use(VueRouter)
 
@@ -51,11 +52,16 @@ const routes = [
     name: 'wallet',
     component: Wallet
   },
-  // {
-  //   path: '/account-info',
-  //   name: 'accountInfo',
-  //   component: AccountInfo
-  // },
+  {
+    path: '/account-info',
+    name: 'accountInfo',
+    component: AccountInfo
+  },
+  {
+    path: '/collection',
+    name: 'collection',
+    component: MyCollection
+  },
   {
     path: '/about',
     name: 'about',

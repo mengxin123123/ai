@@ -32,36 +32,6 @@
       <div class="two-column-layout">
         <!-- 左侧内容区域 -->
         <div class="content-wrapper">
-          <!-- 股票走势图 -->
-          <div class="stock-chart-section">
-            <div class="section-header">
-              <h3 class="section-title">股票走势</h3>
-              <div class="section-subtitle">查看更多股票走势 ></div>
-            </div>
-            <div class="chart-container">
-              <div class="chart-area" ref="chartContainer" id="chartContainer"></div>
-              <div class="chart-info">
-                <div class="info-item">
-                  <div class="info-label">最高股价（/股）</div>
-                  <div class="info-value">XXX</div>
-                </div>
-                <div class="info-item">
-                  <div class="info-label">投资金额</div>
-                  <div class="info-value">XXX</div>
-                </div>
-                <div class="info-item">
-                  <div class="info-label">昨日收益</div>
-                  <div class="info-value">XXX</div>
-                </div>
-                <div class="info-item">
-                  <div class="info-label">月均收入</div>
-                  <div class="info-value">XXX</div>
-                </div>
-              </div>
-
-            </div>
-          </div>
-
           <!-- 我的助手 -->
           <div class="my-assistants-section">
             <div class="section-header">
@@ -69,14 +39,27 @@
               <div class="section-subtitle">更多 ></div>
             </div>
             <div class="assistants-grid">
-              <div class="assistant-card" v-for="i in 5" :key="i">
+              <div class="assistant-card" v-for="i in 4" :key="i">
                 <div class="assistant-placeholder">DEMO</div>
               </div>
             </div>
           </div>
 
-          <!-- 我的收藏 -->
-          <!-- <div class="my-collections-section">
+          <!-- 每日推荐 (替换原来的股票走势图) -->
+          <div class="daily-recommendations-section">
+            <div class="section-header">
+              <h3 class="section-title">每日推荐</h3>
+              <div class="section-subtitle">更多 ></div>
+            </div>
+            <div class="recommendations-grid">
+              <div class="recommendation-card" v-for="i in 4" :key="i">
+                <div class="recommendation-placeholder"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 我的收藏
+          <div class="my-collections-section">
             <div class="section-header">
               <h3 class="section-title">我的收藏</h3>
               <div class="section-subtitle">更多 ></div>
@@ -99,7 +82,7 @@
             </div>
           </div>
 
-          <!-- 收益日报 -->
+          <!-- 收益日报
           <div class="daily-earnings-section">
             <div class="section-header">
               <h3 class="section-title">收益日报</h3>
@@ -114,28 +97,21 @@
                 <span class="earnings-value">7.4%收益</span>
               </div>
             </div>
-          </div>
+          </div> -->
 
           <!-- 钱包区域 -->
           <div class="wallet-section">
             <div class="section-header">
-              <h3 class="section-title">钱包</h3>
+              <h3 class="section-title" style="position:relative ;top: 10px;left: 10px;">钱包</h3>
               <div class="wallet-icon">
                 <i class="eye-icon"></i>
               </div>
             </div>
-            <div class="wallet-cards">
-              <div class="wallet-card">
-                <span class="card-value">XX</span>
-                <span class="card-label">平台余额</span>
-              </div>
-              <div class="wallet-card">
-                <span class="card-value">XX</span>
-                <span class="card-label">店铺余额</span>
-              </div>
-              <div class="wallet-card">
-                <span class="card-value">XX</span>
-                <span class="card-label">积分余额</span>
+            <div class="wallet-content">
+              <div class="wallet-balance">
+                <div class="balance-label">平台余额</div>
+                <div class="balance-value">¥ 2,630.60</div>
+                <div class="balance-action">前往充值</div>
               </div>
             </div>
           </div>
@@ -146,14 +122,21 @@
               <h3 class="section-title">我的收藏</h3>
               <div class="section-more">更多 ></div>
             </div>
-            <div class="collections-right-grid">
-            <div class="collection-right-card" v-for="i in 3" :key="i">
-              <div class="collection-right-placeholder"></div>
+            <div class="collections-content">
+              <div class="collection-row">
+                <div class="collection-item"></div>
+                <div class="collection-item"></div>
+                <div class="collection-item"></div>
+              </div>
+              <div class="collection-row">
+                <div class="collection-item"></div>
+                <div class="collection-item"></div>
+                <div class="collection-item"></div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
   </sidebar-layout>
 </template>
 
@@ -308,22 +291,7 @@ export default {
   color: #333;
 }
 
-/* 主内容区域样式 */
-.main-content {
-  flex: 1;
-  padding: 35px;
-  background-color: #fff;
-  margin: 20px;
-  margin-left: 240px;
-  margin-right: 320px;
-  border-radius: 20px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-  position: relative;
-  z-index: 1;
-  height: 1370px;
-  overflow: hidden;
-right: -240px;
-}
+
 
 .two-column-layout {
   display: grid;
@@ -348,23 +316,24 @@ right: -240px;
 
 /* 广告区域样式 */
 .ad-banner {
-  background: linear-gradient(135deg, #6c5ce7, #a29bfe);
+  background-image: url("@/views/photos/Profilelbac.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   border-radius: 16px;
   padding: 25px;
   color: white;
   text-align: center;
-  height: 310px!important;
-  width: 850px;
+  height: 18vh!important;
+  width: 285%;
   display: flex;
   align-items: center;
   justify-content: center;
   box-shadow: 0 8px 20px rgba(108, 92, 231, 0.3);
   overflow: hidden;
   position: relative;
-  top: -335px;
-  left: -550px;
-
-
+  top: -19vh;
+  right: 15.6vw;
 }
 
 .ad-content h3 {
@@ -388,7 +357,7 @@ right: -240px;
   position: relative;
   top: -330px;
   width: 850px;
-left: -550px;
+  left: -550px;
 }
 
 .section-header {
@@ -399,16 +368,17 @@ left: -550px;
 }
 
 .section-title {
-  font-size: 26px!important;
+  font-size: 32px!important;
   font-weight: 500;
   color: #333;
   margin: 0;
 }
 
 .section-more {
-  font-size: 12px;
-  color: #999;
+  font-size: 18px;
+  color: #6c5ce7;
   cursor: pointer;
+  font-weight: 500;
 }
 
 .earnings-content {
@@ -433,6 +403,10 @@ left: -550px;
   font-weight: 500;
 }
 
+
+
+
+
 /* 钱包区域样式 */
 .wallet-section {
   background: white;
@@ -441,9 +415,10 @@ left: -550px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   border: 1px solid #f0f0f0;
   position: relative;
-  top: -350px;
-  width: 850px;
-left: -550px;
+  top: -18vh;
+  width: 285%;
+  right: 15.6vw;
+  height: 19vh;
 }
 
 .wallet-icon {
@@ -458,30 +433,82 @@ left: -550px;
   cursor: pointer;
 }
 
-.wallet-cards {
-  display: flex;
-  justify-content: space-between;
+.wallet-content {
+  margin-top: 15px;
+}
+
+.wallet-balance {
+  text-align: left;
+}
+
+.balance-label {
+  font-size: 36px;
+  color: #666;
+  margin-bottom: 8px;
+   position: relative;
+  left: 10px;
+  top: 40px;
+}
+
+.balance-value {
+  font-size: 38px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+  position: relative;
+  left: 10px;
+  top: 90px;
+}
+
+.balance-action {
+  font-size: 24px;
+  color: #6c5ce7;
+  cursor: pointer;
+  text-decoration: underline;
+  position: relative;
+  left: 18vw;
+  top: 40px;
+}
+
+/* 我的收藏区域样式 */
+.my-collections-section {
+  background: #fff;
+  border-radius: 16px;
+  padding: 25px;
+  margin-bottom: 25px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border: 1px solid #eaeaea;
+}
+
+.collections-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
   margin-top: 10px;
 }
 
-.wallet-card {
+.collection-card {
+  background: linear-gradient(to bottom, #f8f9ff, #f0f3ff);
+  border-radius: 12px;
+  height: 140px;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  flex: 1;
-  padding: 10px 5px;
+  border: 1px solid #e6e6e6;
+  box-shadow: 0 2px 8px rgba(108, 92, 231, 0.08);
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
 
-.card-value {
-  font-size: 18px;
+.collection-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(108, 92, 231, 0.15);
+}
+
+.collection-placeholder {
+  color: #6c5ce7;
+  font-size: 16px;
   font-weight: 500;
-  color: #333;
-  margin-bottom: 5px;
-}
-
-.card-label {
-  font-size: 12px;
-  color: #999;
 }
 
 /* 右侧收藏区域样式 */
@@ -493,36 +520,38 @@ left: -550px;
   border: 1px solid #eaeaea;
   margin-bottom: 25px;
   position: relative;
-  top: -370px;
-  width: 850px;
-left: -550px;
-
-height: 275px;
+  top: -17vh;
+  width: 285%;
+  right: 15.6vw;
+  height: 50vh;
 }
 
-.collections-right-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 15px;
-  margin-top: 15px;
-}
-
-.collection-right-card {
-  background: linear-gradient(to right, #f8f9ff, #f0f3ff);
-  border-radius: 12px;
-  height: 180px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid #e6e6e6;
-  box-shadow: 0 2px 8px rgba(108, 92, 231, 0.08);
-  transition: all 0.3s ease;
+.section-more {
+ font-size: 18px;
+  color: #6c5ce7;
   cursor: pointer;
 }
 
-.collection-right-card:hover {
-  transform: translateX(3px);
-  box-shadow: 0 4px 12px rgba(108, 92, 231, 0.15);
+.collections-content {
+  margin-top: 19px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+  top: 60px;
+}
+
+.collection-row {
+  display: flex;
+  gap: 20px;
+}
+
+.collection-item {
+  flex: 1;
+  height: 18vh;
+  background: #f5f5f5;
+  border-radius: 12px;
+  border: 1px solid #e6e6e6;
 }
 
 .collection-right-placeholder {
@@ -546,9 +575,8 @@ height: 275px;
   display: flex;
   flex-direction: column;
   gap: 20px;
-  width: 1370px;
-  height: 310px;
-
+  width: 68%;
+  height: 18vh;
 }
 
 .user-header {
@@ -706,86 +734,9 @@ height: 275px;
   color: #999;
 }
 
-/* 用户卡片区域样式 */
-.user-card-section {
-  grid-column: 1 / 2;
-}
 
-.user-card {
-  background: #fff;
-  border-radius: 12px;
-  padding: 15px;
-  margin-bottom: 20px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-}
 
-.card-header {
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px;
-}
-
-.user-card-avatar {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  margin-right: 10px;
-}
-
-.card-info {
-  display: flex;
-  flex-direction: column;
-}
-
-.card-name {
-  font-weight: bold;
-  font-size: 14px;
-  margin-bottom: 5px;
-}
-
-.card-tags {
-  display: flex;
-  gap: 5px;
-}
-
-.tag-level, .tag-role {
-  background: #f0f0f0;
-  padding: 2px 6px;
-  border-radius: 4px;
-  font-size: 12px;
-  color: #666;
-  border: 1px solid #e6e6e6;
-}
-
-.card-content {
-  padding: 10px 0;
-}
-
-.content-text {
-  font-size: 14px;
-  color: #333;
-  margin-bottom: 8px;
-}
-
-.content-time {
-  font-size: 12px;
-  color: #999;
-}
-
-/* 股票走势图区域样式 */
-.stock-chart-section {
-  background: #fff;
-  border-radius: 16px;
-  padding: 25px;
-  margin-bottom: 25px;
-  grid-column: 1 / 2;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  border: 1px solid #eaeaea;
-  width: 1370px;
-  height: 450px;
-
-}
-
+/* 通用区域头部样式 */
 .section-header {
   display: flex;
   justify-content: space-between;
@@ -800,28 +751,11 @@ height: 275px;
 }
 
 .section-subtitle {
-  font-size: 14px;
+  font-size: 18px;
   color: #6c5ce7;
   cursor: pointer;
   font-weight: 500;
   margin-right: 0px;
-}
-
-.chart-container {
-  display: flex;
-  flex-direction: row;
-  gap: 20px;
-}
-
-.chart-area {
-  flex: 1;
-  height: 300px;
-  border-radius: 8px;
-  overflow: hidden;
-  background-color: #f9fafc;
-  position: relative;
-  top: 40px;
-
 }
 
 
@@ -834,16 +768,15 @@ height: 275px;
   margin-bottom: 25px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   border: 1px solid #eaeaea;
-  width:1370px;
+  width: 150%;
   position: relative;
-  top: -200px;
-  height: 500px;
-
+  top: 1vh;
+  height: 38vh;
 }
 
 .assistants-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 15px;
   margin-top: 10px;
 }
@@ -851,7 +784,7 @@ height: 275px;
 .assistant-card {
   background: linear-gradient(to bottom, #f8f9ff, #f0f3ff);
   border-radius: 12px;
-  height: 320px;
+  height: 30vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -873,203 +806,56 @@ height: 275px;
   font-weight: 500;
 }
 
-/* 收益日报区域样式 */
-.daily-earnings-section {
+/* 每日推荐区域样式 (替换股票走势图) */
+.daily-recommendations-section {
   background: #fff;
   border-radius: 16px;
   padding: 25px;
+  margin-bottom: 25px;
+  grid-column: 1 / 2;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   border: 1px solid #eaeaea;
-  margin-bottom: 25px;
+  width: 150%;
+  height: 32vh;
+  position: relative;
+  top: -8.6vh;
 }
 
-.earnings-content {
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-  margin-top: 10px;
-  background-color: #f9fafc;
-  border-radius: 12px;
-  padding: 20px;
-}
-
-.earnings-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 12px 0;
-  border-bottom: 1px dashed #e0e0e0;
-}
-
-.earnings-item:last-child {
-  border-bottom: none;
-}
-
-.earnings-label {
-  font-size: 15px;
-  color: #222;
-  font-weight: 500;
-}
-
-.earnings-value {
-  font-weight: 600;
-  color: #6c5ce7;
-  font-size: 16px;
-}
-
-.earnings-item:nth-child(2) .earnings-value {
-  color: #ff6b6b;
-}
-
-/* 钱包区域样式 */
-.wallet-section {
-  background: #fff;
-  border-radius: 16px;
-  padding: 25px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  border: 1px solid #eaeaea;
-  margin-bottom: 25px;
-}
-
-.wallet-cards {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  margin-top: 15px;
-}
-
-.wallet-card {
-  background: linear-gradient(to right, #f8f9ff, #f0f3ff);
-  border-radius: 12px;
-  padding: 18px;
+.recommendations-grid {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  border: 1px solid #e6e6e6;
-  box-shadow: 0 2px 8px rgba(108, 92, 231, 0.08);
-  transition: all 0.3s ease;
-  cursor: pointer;
+  gap: 20px;
 }
 
-.wallet-card:hover {
-  transform: translateX(3px);
-  box-shadow: 0 4px 12px rgba(108, 92, 231, 0.15);
-}
-
-.card-value {
-  font-size: 20px;
-  font-weight: 600;
-  color: #6c5ce7;
-}
-
-.card-label {
-  font-size: 15px;
-  color: #444;
-  font-weight: 500;
-  margin-bottom: 5px;
-}
-
-/* 我的收藏区域样式 */
-.my-collections-section {
-  background: #fff;
-  border-radius: 16px;
-  padding: 25px;
-  margin-bottom: 25px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  border: 1px solid #eaeaea;
-}
-
-.collections-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
-  margin-top: 10px;
-}
-
-.collection-card {
-  background: linear-gradient(to bottom, #f8f9ff, #f0f3ff);
-  border-radius: 12px;
-  height: 140px;
+.recommendation-card {
+  flex: 1;
+  height: 22vh;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #f9fafc;
+  position: relative;
+  top: 40px;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   border: 1px solid #e6e6e6;
   box-shadow: 0 2px 8px rgba(108, 92, 231, 0.08);
   transition: all 0.3s ease;
   cursor: pointer;
 }
 
-.collection-card:hover {
+.recommendation-card:hover {
   transform: translateY(-3px);
   box-shadow: 0 4px 12px rgba(108, 92, 231, 0.15);
 }
 
-.collection-placeholder {
+.recommendation-placeholder {
   color: #6c5ce7;
   font-size: 16px;
   font-weight: 500;
 }
 
-/* 右侧区域样式 */
-.sidebar-wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
-}
 
-.right-sidebar {
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
-  width: 300px;
-}
 
-.ad-banner {
-  background: linear-gradient(135deg, #6c5ce7, #a29bfe);
-  border-radius: 16px;
-  height: 380px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  padding: 25px;
-  box-shadow: 0 8px 20px rgba(108, 92, 231, 0.3);
-  overflow: hidden;
-  position: relative;
-}
 
-.ad-banner::before, .ad-banner::after {
-  content: '';
-  position: absolute;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 50%;
-}
-
-.ad-banner::before {
-  top: -50px;
-  right: -50px;
-  width: 180px;
-  height: 180px;
-}
-
-.ad-banner::after {
-  bottom: -30px;
-  left: -30px;
-  width: 120px;
-  height: 120px;
-}
-
-.ad-content {
-  text-align: center;
-}
-
-.ad-content h3 {
-  font-size: 24px;
-  margin-bottom: 10px;
-}
-
-.ad-content p {
-  font-size: 16px;
-}
 </style>
