@@ -768,7 +768,7 @@ export default {
   margin-bottom: 25px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   border: 1px solid #eaeaea;
-  width: 145%;
+  width: 150%;
   position: relative;
   top: 1vh;
   height: 38vh;
@@ -815,7 +815,7 @@ export default {
   grid-column: 1 / 2;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   border: 1px solid #eaeaea;
-  width: 145%;
+  width: 150%;
   height: 32vh;
   position: relative;
   top: -8.6vh;

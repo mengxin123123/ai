@@ -16,13 +16,13 @@
 
       <!-- 功能卡片区域 -->
       <div class="function-cards">
-        <div v-for="card in functionCards" :key="card.id" class="card" :style="{ backgroundColor: '#f0f0f0', backgroundImage: `url(${card.bgImage})`, backgroundSize: '100% 100%', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }">
+        <div v-for="card in functionCards" :key="card.id" class="card" :style="{ backgroundColor: '#f0f0f0', backgroundImage: `url(${card.bgImage})`, backgroundSize: '100% 100%', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }" @click="goToAssistantDetail(card.id)">
           <div class="card-header">
             <img :src="card.icon" :alt="card.title">
             <h3>{{ card.title }}</h3>
           </div>
           <p class="card-description">{{ card.description.substring(0, 10) }}<br>{{ card.description.substring(10) }}</p>
-          <button class="card-button">
+          <button class="card-button" @click.stop="goToAssistantDetail(card.id)">
             <span v-if="typeof card.buttonIcon === 'string' && !card.buttonIcon.includes('<svg')">{{ card.buttonIcon }}</span>
             <img v-else-if="typeof card.buttonIcon === 'string' && !card.buttonIcon.includes('<svg')" class="button-icon" :src="card.buttonIcon" alt="icon">
             <span v-else v-html="card.buttonIcon" class="svg-icon"></span>
@@ -37,30 +37,41 @@
           <img src="@/views/photos/Assistant8.png" alt="Finance">
           <h2>你的<span class="highlight-text">高效融资</span>助手</h2>
         </div>
-        <div class="finance-card" :style="{ backgroundColor: '#f0f0f0', backgroundImage: `url(${require('@/views/photos/Assistant16.png')})`, backgroundSize: '100% 100%', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }">
+        <div class="finance-card" :style="{ backgroundColor: '#f0f0f0', backgroundImage: `url(${require('@/views/photos/Assistant16.png')})`, backgroundSize: '100% 100%', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }" @click="goToAssistantDetail('finance')">
           <div class="card-header">
             <img src="../views/photos/Assistant 4.png" alt="智股明晰">
             <h3>智股明晰</h3>
           </div>
           <p class="card-description">AI智能析股精准，<br>洞察行情决策更明</p>
-          <button class="card-button">
-            <span v-html="'<svg t=&quot;1756281527767&quot; class=&quot;icon&quot; viewBox=&quot;0 0 1024 1024&quot; version=&quot;1.1&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; p-id=&quot;9221&quot; width=&quot;35&quot; height=&quot;35&quot;><path d=&quot;M426.573 236.76a47.75 47.75 0 0 1 4.468 14.78l12.485 186.106 6.197 93.54a96.404 96.404 0 0 0 4.468 28.364c7.485 17.825 25.491 29.154 45.082 28.364l298.515-19.575c12.927-0.213 25.41 4.633 34.702 13.474 7.744 7.368 12.744 17.006 14.319 27.372l0.529 6.294c-12.353 171.486-137.983 314.518-308.682 351.44-170.698 36.922-345.742-41.074-430.093-191.642-24.318-43.744-39.507-91.825-44.676-141.42a271.206 271.206 0 0 1-2.843-44.345C60.777 405.66 191.372 246.714 374.18 208.396c22.003-3.435 43.572 8.242 52.393 28.364z m-54.197 33.42l-4.347 1.134c-144.05 38.564-245.379 166.38-247.181 313.643l-0.023 5.05-0.01 0.582a211.374 211.374 0 0 0 1.844 31.92l0.371 2.643 0.184 1.249 0.13 1.255a309.884 309.884 0 0 0 37.368 118.386c71.462 127.56 220.171 193.822 365.31 162.428 137.65-29.774 240.523-140.55 259.413-275.747l0.485-3.678-283.488 18.59-0.752 0.03c-43.957 1.773-84.59-23.497-102.081-63.731l-0.523-1.224-1.066-2.538-0.828-2.626a156.238 156.238 0 0 1-7.158-41.896l-0.054-2.08-6.09-91.92-11.504-171.47zM546.754 79.008l0.94 0.03C753.616 84.268 926.686 232.126 960 431.278l-0.318 1.47-0.91 2.137 0.128 5.866c-0.472 7.772-3.477 15.25-8.656 21.29-5.394 6.291-12.764 10.576-20.88 12.239l-4.95 0.678-346.86 22.44c-11.538 1.137-23.025-2.578-31.606-10.22-7.15-6.368-11.72-14.964-13.012-24.227l-23.282-345.845a5.502 5.502 0 0 1 0-3.606c0.318-9.533 4.52-18.544 11.669-25.02 6.917-6.267 16.035-9.654 25.431-9.473z m24.374 61.27l19.949 296.32 305.02-19.734-0.23-0.982C859.551 266.357 729.538 155.32 572.574 140.404l-1.447-0.127z&quot; fill=&quot;#8CADF4&quot; p-id=&quot;9222&quot;></path></svg>'" class="svg-icon"></span>
+          <button class="card-button" @click.stop="goToAssistantDetail('finance')">
+            <span v-html="'<svg t=&quot;1756281527767&quot; class=&quot;icon&quot; viewBox=&quot;0 0 1024 1024&quot; version=&quot;1.1&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; p-id=&quot;9221&quot; width=&quot;35&quot; height=&quot;35&quot;><path d=&quot;M426.573 236.76a47.75 47.75 0 0 1 4.468 14.78l12.485 186.106 6.197 93.54a96.404 96.404 0 0 0 4.468 28.364c7.485 17.825 25.491 29.154 45.082 28.364l298.515-19.575c12.927-0.213 25.41 4.633 34.702 13.474 7.744 7.368 12.744 17.006 14.319 27.372l0.529 6.294c-12.353 171.486-137.983 314.518-308.682 351.44-170.698 36.922-345.742-41.074-430.093-191.642-24.318-43.744-39.507-91.825-44.676-141.42a271.206 271.206 0 0 1-2.843-44.345C60.777 405.66 191.372 246.714 374.18 208.396c22.003-3.435 43.572 8.242 52.393 28.364z m-54.197 33.42l-4.347 1.134c-144.05 38.564-245.379 166.38-247.181 313.643l-0.023 5.05-0.01 0.582a211.374 211.374 0 0 0 1.844 31.92l0.371 2.643 0.184 1.249 0.13 1.255a309.884 309.884 0 0 0 37.368 118.386c71.462 127.56 220.171 193.822 365.31 162.428 137.65-29.774 240.523-140.55 259.413-275.747l0.485-3.678-283.488 18.59-0.752 0.30c-43.957 1.773-84.59-23.497-102.081-63.731l-0.523-1.224-1.066-2.538-0.828-2.626a156.238 156.238 0 0 1-7.158-41.896l-0.054-2.08-6.09-91.92-11.504-171.47zM546.754 79.008l0.94 0.03C753.616 84.268 926.686 232.126 960 431.278l-0.318 1.47-0.91 2.137 0.128 5.866c-0.472 7.772-3.477 15.25-8.656 21.29-5.394 6.291-12.764 10.576-20.88 12.239l-4.95 0.678-346.86 22.44c-11.538 1.137-23.025-2.578-31.606-10.22-7.15-6.368-11.72-14.964-13.012-24.227l-23.282-345.845a5.502 5.502 0 0 1 0-3.606c0.318-9.533 4.52-18.544 11.669-25.02 6.917-6.267 16.035-9.654 25.431-9.473z m24.374 61.27l19.949 296.32 305.02-19.734-0.23-0.982C859.551 266.357 729.538 155.32 572.574 140.404l-1.447-0.127z&quot; fill=&quot;#8CADF4&quot; p-id=&quot;9222&quot;></path></svg>'" class="svg-icon"></span>
             股票分析
           </button>
         </div>
       </div>
     </div>
   </div>
+  
+  <!-- 助手详情模态框 -->
+  <assistant-modal 
+    :visible="modalVisible" 
+    :assistant-id="selectedAssistantId"
+    @close="closeModal"
+    @switch-assistant="switchAssistant"
+  />
   </sidebar-layout>
 </template>
 
 <script>
 import SidebarLayout from '@/components/SidebarLayout.vue'
+import AssistantModal from '@/components/AssistantModal.vue'
 
 export default {
   name: 'Assistant',
   data() {
     return {
+      modalVisible: false,
+      selectedAssistantId: '1',
       functionCards: [
         {
           id: 1,
@@ -126,7 +137,20 @@ export default {
     };
   },
   components: {
-    SidebarLayout
+    SidebarLayout,
+    AssistantModal
+  },
+  methods: {
+    goToAssistantDetail(id) {
+      this.selectedAssistantId = id
+      this.modalVisible = true
+    },
+    closeModal() {
+      this.modalVisible = false
+    },
+    switchAssistant(id) {
+      this.selectedAssistantId = id
+    }
   }
 }
 </script>
@@ -226,6 +250,7 @@ header {
   min-height: 20vh;
   width: 100%;
   margin: 0 auto;
+  cursor: pointer;
 }
 
 .card:hover {
@@ -275,6 +300,7 @@ header {
   margin-bottom: 2rem;
   display: -webkit-box;
   -webkit-line-clamp: 2;
+  line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
   height: 4rem;
@@ -360,6 +386,7 @@ header {
   width: 32%!important;
   max-width: 40%;
   margin-top: 2rem;
+  cursor: pointer;
 }
 
 .finance-card:hover {
@@ -397,6 +424,7 @@ header {
   margin-bottom: 2rem;
   display: -webkit-box;
   -webkit-line-clamp: 2;
+  line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
   height: 4rem;
