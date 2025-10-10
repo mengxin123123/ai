@@ -421,8 +421,16 @@ export default {
   z-index:30;
 
 }
+.function-understanding{
+  position: relative;
+  width: 80px;
+  left: -375px;
+  top: -102px;
+}
 .line4{
-  width: 180px;
+  width: 380px;
+  margin-left: -380px;
+  margin-top: 4px;
 }
 .point4{
   position: absolute;
@@ -667,8 +675,8 @@ export default {
   align-items: center;
   margin-bottom: 15px;
   position: relative;
-  top: 0px;
-  left: 50px;
+  top: -172px;
+  left:260px;
 
 }
 .feature-header4 {
@@ -734,14 +742,15 @@ export default {
   text-align: right;
 }
 .feature-desc3 {
-  font-size: 24px;
+  font-size: 18px;
   color: #666;
   line-height: 1.6;
-  margin-left: 65px;
+  margin-left: px;
   width: 400px;
   position: relative;
-  top: 55px;
-  left: -180px;
+  top: -165px;
+  left: 166px;
+  letter-spacing: 1px;
 }
 .feature-desc4 {
   font-size: 18px;
