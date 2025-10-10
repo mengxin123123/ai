@@ -23,7 +23,7 @@ export default {
 }
 
 .content-view {
-  padding-top: 80px;
+  padding-top: 84px;
 }
 </style>
 

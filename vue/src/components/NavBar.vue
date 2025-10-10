@@ -68,7 +68,8 @@ export default {
 .nav-bar {
   display: flex;
   align-items: center; /* 确保所有子元素垂直居中 */
-
+  width: 1925px;
+  
   background: rgba(255,255,255,0.98);
   box-shadow: 0 2px 10px rgba(0,0,0,0.05);
   position: fixed;
@@ -76,14 +77,14 @@ export default {
   left: 0;
   right: 0;
   z-index: 100;
-  height: 74px; /* 增加导航栏高度 */
+  height: 84px; /* 增加导航栏高度 */
 }
 
 .logo {
   display: flex;
   align-items: center;
   position: relative;
-  left: 240px;
+  left: 276px;
 }
 
 .logo img {
@@ -104,7 +105,7 @@ export default {
 .nav-item {
   font-family: 'PingFang SC', 'Helvetica Neue', 'Microsoft YaHei', sans-serif;
   font-weight: 500;
-  font-size: 28px; /* 放大导航字体 */
+  font-size: 25px; /* 放大导航字体 */
   line-height: 1.2;
   color: #333;
   cursor: pointer;
@@ -136,7 +137,7 @@ export default {
   align-items: center; /* 确保垂直居中对齐 */
   gap: 30px; /* 增加间距 */
   position: relative;
-  left: -380px;
+  right:276px;
 }
 
 .tool-item {

@@ -1,5 +1,4 @@
-position: relative;
-left: -200px;
+
 <template>
   <div class="index-container">
     <!-- 背景图片区域 -->
@@ -20,7 +19,27 @@ left: -200px;
     <div class="features-section">
       <div class="section-header">
         <h2 class="section-title">功能介绍</h2>
-        <a href="#" class="more-link">查看更多 ></a>
+        <a href="#" class="more-link">查看更多></a>
+      </div>
+      <div>
+        <img src="./photos/function1.png" class="function1">
+        <img src="./photos/function2.png" class="function2">
+        <div class="point1">
+          <hr class="line1"></hr>
+          <img src="./photos/function-document.png" class="function-document">
+        </div>
+        <div class="point2">
+          <hr class="line2">
+          <img src="./photos/function-text.png" class="function-text">
+        </div>
+        <div class="point3">
+          <hr class="line3">
+          <img src="./photos/function-knowledge.png" class="function-knowledge">
+        </div>
+        <div class="point4">
+          <hr class="line4">
+          <img src="./photos/function-understanding.png" class="function-understanding">
+        </div>
       </div>
       
       <div class="features-visual">
@@ -36,10 +55,9 @@ left: -200px;
         
         <div class="feature-item feature-item-2">
           <div class="feature-header2">
-            
             <h3 class="feature-title">文档解析</h3>
           </div>
-         <p class="feature-desc2">支持上传文档，通过智能分析<br>帮助识别并解析文档内容。</p> 
+         <p class="feature-desc2">支持上传文档，通过智能分析,<br>帮助识别并解析文档内容。</p> 
         </div>
         
         
@@ -335,6 +353,102 @@ export default {
 </script>
 
 <style scoped>
+.function-document{
+  position: relative;
+  width:100px;
+  left: 440px;
+  bottom: 100px;
+
+}
+.line1{
+  width: 526px;
+  margin-left: 9px;
+  margin-top: 4px;
+}
+.point1{
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px solid #BEBEBE; 
+  background-color: white;
+  left: 985px;
+  top: 870px;
+  z-index: 20;
+}
+.function-text{
+  position: relative;
+  width:65px;
+  left: -470px;
+  top: -115px;
+}
+.line2{
+  width: 480px;
+  margin-left: -478px;
+  margin-top: 4px;
+}
+.point2{
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px solid #BEBEBE;
+  background-color: white;
+  left: 880px;
+  top: 940px;
+  z-index: 30;
+}
+.function-knowledge{
+  position: relative;
+  width: 75px;
+  left: 300px;
+  top: -120px;
+}
+.line3{
+  width: 366px;
+  margin-left: 8px;
+  margin-top: 4px;
+}
+.point3{
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px solid #BEBEBE;
+  background-color: white;
+  left: 1060px;
+  top: 1090px;
+  z-index:30;
+
+}
+.line4{
+  width: 180px;
+}
+.point4{
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border: 1px solid #BEBEBE;
+  background-color: white;
+  border-radius: 50%;
+  left: 870px;
+  top: 1145px;
+  z-index: 100;
+
+}
+.function1{
+  position: absolute;
+  width: 436px;
+  left: 736px;
+  top: 846px;
+  z-index: 10;
+}
+.function2{
+  position: absolute;
+  width: 494px;
+  left: 714px;
+  top: 886px;
+}
 .index-container {
   min-height: 100vh;
   background: #fff;
@@ -342,7 +456,7 @@ export default {
 }
 
 .hero-section {
-  height: 800px; /* 增加高度 */
+  height: 545px; /* 增加高度 */
   width: 100%;
   position: relative;
   overflow: hidden;
@@ -352,8 +466,8 @@ export default {
 }
 
 .background-image {
-  width: 100%;
-  height: 100%;
+  width: 1925px;
+  height: 545px;
   position: absolute;
   top: 0;
   left: 0;
@@ -364,46 +478,43 @@ export default {
 
 .hero-content {
   position: relative;
-  padding-left: 120px;
-  max-width: 600px;
   z-index: 1; /* 确保内容在背景图片上层 */
 }
 
 .text-content {
-  margin-bottom: 40px;
   position: relative;
-  left: 300px;
-  top: -100px;
+  left: 278px;
+  top: -35px;
 }
 
 .hero-title {
-  font-size: 68px;
+  font-size: 55px;
   font-weight: 600;
-  margin-bottom: 20px;
+  margin-bottom: 0px;
   color: rgba(56, 116, 251, 1);
   font-family: 'PingFang SC', 'Helvetica Neue', sans-serif;
 }
 
 .hero-subtitle {
-  font-size: 32px;
+  font-size: 23px;
   line-height: 1.6;
   color:rgba(102, 102, 102, 1);
   font-family: 'PingFang SC', 'Helvetica Neue', sans-serif;
-  max-width: 500px;
+  max-width: 460px;
   position: relative;
-  top: 40px;
+  top: 14px;
 }
 
 .button-group {
   display: flex;
   position: relative;
-  left: 300px;
-  top: 50px;
+  left: 278px;
+  top: 15px;
 }
 
 .primary-btn {
-  padding: 25px 70px;
-  font-size: 45px;
+  padding: 12px 38px;
+  font-size: 21px;
   background: 
     linear-gradient(90deg, rgba(15, 64, 64, 0), rgba(86, 118, 237, 1)),
     linear-gradient(90deg, rgba(184, 134, 248, 1), rgba(184, 134, 134, 0));
@@ -412,11 +523,11 @@ export default {
   border-radius: 40px;
   cursor: pointer;
   transition: all 0.3s ease;
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: 1px;
   box-shadow: 0 6px 20px rgba(86, 118, 237, 0.5);
   position: relative;
-  top: -100px;
+  top: 0px;
 }
 
 .primary-btn:hover {
@@ -429,14 +540,17 @@ export default {
 
 .section-header {
   text-align: center;
-  margin-bottom: 80px;
+  margin-bottom: 0px;
 }
 
 .section-title {
-  font-size: 68px!important;
+  
+  font-size: 46px!important;
   font-weight: normal;
   color: #333333;
-  margin-bottom: 15px;
+  margin-bottom: -70px;
+  letter-spacing: 4px;
+  font-weight: 500;
   font-family: 'PingFang SC', 'Helvetica Neue', sans-serif;
 }
 
@@ -449,21 +563,19 @@ export default {
 
 .features-section {
   padding: 80px 0 0; /* 移除底部内边距 */
-  background: url("../views/photos/IndexViewbag2.jpg") no-repeat;
-  background-size: 100% auto; /* 横向填充100%，高度按比例自动调整 */
-  background-position: center top;
-  position: relative;
-  overflow: hidden;
-  margin-bottom: -43px; /* 保持与下方区域的间距 */
-  height: 1300px; /* 设置一个固定的高度，确保图片能完全显示 */
+  background-color: #E5EEFF;
+  margin-top: -12px; /* 保持与下方区域的间距 */
+  width: 1925px;
+  height: 806px; /* 设置一个固定的高度，确保图片能完全显示 */
 }
 
 .more-link {
   color: #3874FB;
-  font-size: 35px;
+  font-size: 22px;
+  letter-spacing: 4px;
   text-decoration: none;
   display: inline-block;
-  margin-top: 10px;
+  margin-top:-5px;
 }
 
 .features-visual {
@@ -537,8 +649,8 @@ export default {
   align-items: center;
   margin-bottom: 15px;
   position: relative;
-  top: 0px;
-  left: -70px;
+  top: -14px;
+  left:160px;
 
 }
 .feature-header2 {
@@ -546,8 +658,8 @@ export default {
   align-items: center;
   margin-bottom: 15px;
   position: relative;
-  top: -90px;
-  left: 240px;
+  top: -84px;
+  left: 10px;
 
 }
 .feature-header3 {
@@ -564,8 +676,8 @@ export default {
   align-items: center;
   margin-bottom: 15px;
   position: relative;
-  top: -80px;
-  left: 110px;
+  top: -228px;
+  left: -68px;
 
 }
 
@@ -591,32 +703,35 @@ export default {
 }
 
 .feature-title {
-  font-size: 45px;
+  font-size: 28px;
   font-weight: 600;
-  color: #3874FB;
+  letter-spacing: 2px;
+  color: #333333;
   margin: 0;
 }
 
 .feature-desc1 {
-  font-size: 24px;
+  font-size: 18px;
   color: #666;
   line-height: 1.6;
   margin-left: 65px;
   width: 400px;
   position: relative;
-  top: 60px;
-  left: -270px;
+  top: -8px;
+  left: 10px;
 
 }
 .feature-desc2 {
-  font-size: 24px;
+  font-size: 18px;
+  letter-spacing: 1px;
   color: #666;
   line-height: 1.6;
   margin-left: 65px;
   width: 400px;
   position: relative;
-  top: -40px;
-  left: 150px;
+  top: -75px;
+  left: -245px;
+  text-align: right;
 }
 .feature-desc3 {
   font-size: 24px;
@@ -629,14 +744,16 @@ export default {
   left: -180px;
 }
 .feature-desc4 {
-  font-size: 24px;
+  font-size: 18px;
   color: #666;
   line-height: 1.6;
   margin-left: 65px;
   width: 400px;
   position: relative;
-  top: -20px;
-  left: -0px;
+  top: -220px;
+  left: -325px;
+  text-align: right;
+  letter-spacing: 1px;
   }
 
 .connecting-lines {
