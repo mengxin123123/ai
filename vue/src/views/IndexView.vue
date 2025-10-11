@@ -95,12 +95,13 @@
           >
             {{ advantage.title }}
           </div>
+          <img src="./photos/advantage.png" alt="" class="advantageicon">
         </div>
       </div>
       <div class="advantages-content">
         <div class="advantage-detail">
           <div class="advantage-text-content">
-            <h3 class="advantage-detail-title">{{ currentAdvantage.title }}</h3>
+            <h3 class="advantage-detail-title">{{ currentAdvantage.titlecontent }}</h3>
             <p class="advantage-detail-desc">{{ currentAdvantage.description }}</p>
             <button class="advantage-btn">立即定制 <span class="btn-arrow">→</span></button>
           </div>
@@ -110,6 +111,7 @@
 
     <!-- 模型服务行业 -->
     <div class="industry-section">
+      <img src="./photos/modelserve-icon.png" alt="" class="modelicon  flip-horizontal">
       <div class="industry-header">
         <h2 class="industry-main-title">模型服务行业</h2>
       </div>
@@ -130,7 +132,7 @@
           <div class="industry-text-content">
             <h3 class="industry-detail-title">{{ currentIndustry.title }}行业</h3>
             <p class="industry-detail-desc">{{ currentIndustry.description }}</p>
-            <button class="industry-btn">查看详情</button>
+            <button class="industry-btn">查看详情 <span class="btn-arrow">→</span></button>
           </div>
         </div>
       </div>
@@ -159,6 +161,16 @@
             <h3 class="model-detail-title">{{ currentModel.title }}介绍</h3>
             <p class="model-detail-desc">{{ currentModel.description }}</p>
             <button class="model-btn">定制咨询<span class="btn-arrow">→</span></button>
+          </div>
+        </div>
+        <div class="tailoricon-box">
+          <img src="./photos/tailormade-icon1.png" alt="" class="tailoricon1">
+          <img src="./photos/tailormade-icon3.png" alt="" class="tailoricon3">
+          <img src="./photos/tailormade-icon4.png" alt="" class="tailoricon4">
+          <div class="tailoricon2-box">
+            <img src="./photos/tailormade-icon2.png" alt="" class="tailoricon2">
+            <img src="./photos/tailormade-icon2.png" alt="" class="tailoricon2">
+            <img src="./photos/tailormade-icon2.png" alt="" class="tailoricon2">
           </div>
         </div>
       </div>
@@ -239,27 +251,32 @@ export default {
         {
           title: '支持定制化',
           description: '定制化 AI 助手让更多为您心。深度适配各类场景与功能，为个人用户提供精准化服务，随时随地为您答疑解惑，陪伴您的日常生活。',
-          image: require('../views/photos/IndexViewbag20.png')
+          image: require('../views/photos/IndexViewbag20.png'),
+          titlecontent:'定制化助手'
         },
         {
           title: '精准语义理解',
           description: '通过先进的自然语言处理技术，精准理解用户意图和上下文语境，提供更加准确的回答和服务，减少沟通成本。',
-          image: require('../views/photos/IndexViewbag20.png')
+          image: require('../views/photos/IndexViewbag20.png'),
+          titlecontent:'精准理解'
         },
         {
           title: '推理能力强',
           description: '基于深度学习和知识图谱的强大推理能力，能够从已有信息中推导出新的见解，解决复杂问题，提供创新思路。',
-          image: require('../views/photos/IndexViewbag20.png')
+          image: require('../views/photos/IndexViewbag20.png'),
+          titlecontent:'超强推理'
         },
         {
           title: '全业务场景覆盖',
           description: '覆盖金融、医疗、教育、零售等多个行业场景，提供全方位的智能解决方案，满足不同领域的专业需求。',
-          image: require('../views/photos/IndexViewbag20.png')
+          image: require('../views/photos/IndexViewbag20.png'),
+          titlecontent:'全场景覆盖'
         },
         {
           title: '海量行业数据',
           description: '基于海量的行业数据训练，具备丰富的专业知识和经验，能够提供更加专业、准确的行业解决方案。',
-          image: require('../views/photos/IndexViewbag20.png')
+          image: require('../views/photos/IndexViewbag20.png'),
+          titlecontent:'海量数据'
         }
       ],
       // 行业数据
@@ -353,12 +370,70 @@ export default {
 </script>
 
 <style scoped>
+/* 引入思源黑体（Noto Sans SC）的多个字重 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap');
 .function-document{
   position: relative;
   width:100px;
   left: 440px;
   bottom: 100px;
 
+}
+
+.tailoricon-box{
+  top: 505px;
+  position: absolute;
+  width: auto;
+  left: 1000px;
+}
+.tailoricon1{
+  width: 870px;
+  position: relative;
+  top: -320px;
+  left: -238px;
+  z-index: 10;
+}
+.tailoricon2-box{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: -1238px;
+  left: -87px;
+}
+.tailoricon2{
+  width: 200px;
+  position: relative;
+  margin: -78px;
+}
+.tailoricon3{
+  width: 200px;
+  position: relative;
+  top: -1050px;
+  left: 350px;
+  z-index: 15;
+}
+.tailoricon4{
+  width: 400px;
+  position: relative;
+  top: -875px;
+  left: -208px;
+  z-index:5 ;
+}
+.modelicon{
+  position: absolute;
+  width: 1080px;
+  left: 168px;
+  top: 58px;
+}
+.flip-horizontal {
+   transform: scaleX(-1); 
+  }
+.advantageicon{
+  position: absolute;
+  width: 640px;
+  left: 720px;
+  top: -70px;
+  z-index: 0;
 }
 .line1{
   width: 526px;
@@ -418,7 +493,7 @@ export default {
   background-color: white;
   left: 1060px;
   top: 1090px;
-  z-index:30;
+
 
 }
 .function-understanding{
@@ -441,7 +516,7 @@ export default {
   border-radius: 50%;
   left: 870px;
   top: 1145px;
-  z-index: 100;
+ 
 
 }
 .function1{
@@ -496,11 +571,12 @@ export default {
 }
 
 .hero-title {
-  font-size: 55px;
-  font-weight: 600;
+  font-size: 62px;
+  font-weight: 700;
   margin-bottom: 0px;
+  letter-spacing: 3px;
   color: rgba(56, 116, 251, 1);
-  font-family: 'PingFang SC', 'Helvetica Neue', sans-serif;
+  font-family: 'Noto Sans SC', sans-serif;
 }
 
 .hero-subtitle {
@@ -552,14 +628,12 @@ export default {
 }
 
 .section-title {
-  
-  font-size: 46px!important;
-  font-weight: normal;
   color: #333333;
   margin-bottom: -70px;
-  letter-spacing: 4px;
-  font-weight: 500;
-  font-family: 'PingFang SC', 'Helvetica Neue', sans-serif;
+  font-size: 48px;
+  font-weight: 600;
+  font-family: 'Noto Sans SC', sans-serif;
+  letter-spacing: 3px;
 }
 
 .section-subtitle {
@@ -867,34 +941,38 @@ export default {
 /* 优势区域样式 */
 .advantages-section {
   padding: 80px 0;
-  background-image: url(../views/photos/d589d7719bd0cdc9bf61868cb8e000c2.png);
+  background-image: url(../views/photos/advantage-background.png);
+  width: 1920px;
+  height: 670px;
   background-size: 100% 100%;
   background-position: center;
   background-repeat: no-repeat;
   position: relative;
   overflow: hidden;
-  min-height: 800px;
+  
 }
 
 .advantages-header {
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 0px;
   position: relative;
-  left: -920px;
+  top: 14px;
+  left: -560px;
+  letter-spacing: 2px;
 }
 
 .advantages-title {
-  font-size: 68px;
-  font-weight: normal;
+  font-size: 48px;
+  font-weight: 600;
   color: #333;
   margin-bottom: 20px;
+  font-family: 'Noto Sans SC', sans-serif;
 }
 
 .advantages-tabs-container {
-  border-bottom: 1px solid #e0e0e0;
   margin-bottom: 60px;
   position: relative;
-  left: 300px;
+  left: 304px;
   width: 1400px;
 }
 
@@ -907,13 +985,17 @@ export default {
 }
 
 .advantages-tab {
+  font-family: 'Noto Sans SC', sans-serif;
   padding: 15px 25px;
   cursor: pointer;
   transition: all 0.3s ease;
-  font-size: 28px;
+  font-size: 26px;
   color: #666666;
   position: relative;
-  margin: 0 10px;
+  font-weight: 600;
+  top: 4px;
+  left: -250px;
+  z-index: 10;
 }
 
 .advantages-tab.active {
@@ -925,18 +1007,15 @@ export default {
   content: '';
   position: absolute;
   bottom: -1px;
-  left: 0;
-  width: 100%;
+  left: 22px;
+  width: 73%;
   height: 3px;
   background: #3874FB;
 }
 
 .advantages-content {
   max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
   position: relative;
-  left: -500px;
 }
 
 .advantage-detail {
@@ -949,25 +1028,34 @@ export default {
 .advantage-text-content {
   flex: 1;
   max-width: 500px;
+  position: relative;
+  left: 276px;
+  top:-15px;
+
 }
 
 .advantage-detail-title {
-  font-size: 46px;
-  font-weight: normal;
+  font-size: 30px;
+  font-weight: 600;
+  font-family: 'Noto Sans SC', sans-serif;
   color: #333;
-  margin-bottom: 30px;
+  
 }
 
 .advantage-detail-desc {
-  font-size: 32px;
-  line-height: 1.8;
+  font-size: 20px;
+  line-height: 1.6;
   color: #666;
-  margin-bottom: 40px;
+  font-weight: normal;
+  font-family: 'Noto Sans SC', sans-serif;
+  position: relative;
+  top: 30px;
+  
 }
 
 .advantage-btn {
-  padding: 18px 50px;
-  font-size: 32px;
+  padding: 8px 18px;
+  font-size: 18px;
   background: 
     linear-gradient(90deg, rgba(15, 64, 64, 0), rgba(86, 118, 237, 1)),
     linear-gradient(90deg, rgba(184, 134, 248, 1), rgba(184, 134, 134, 0));
@@ -979,6 +1067,9 @@ export default {
   font-weight: 500;
   letter-spacing: 1px;
   box-shadow: 0 4px 15px rgba(86, 118, 237, 0.4);
+  position: absolute;
+  top: 232px;
+  
 }
 
 .advantage-btn:hover {
@@ -1079,12 +1170,12 @@ export default {
   background: #333333;
   padding: 0;
   color: #FFFFFF;
+  width: 1925px;
   height: 400px;
   position: relative;
 }
 
 .footer-content {
-  max-width: 1400px;
   margin: 0 auto;
   padding: 60px 100px;
   display: flex;
@@ -1092,9 +1183,9 @@ export default {
 }
 
 .company-info {
-  max-width: 400px;
+  
   position: relative;
-  left: -800px;
+  left: 0px;
 }
 
 .company-name {
@@ -1104,7 +1195,7 @@ export default {
 }
 
 .contact-info {
-  font-size: 20px;
+  font-size: 14px;
   line-height: 2;
   color: rgba(255, 255, 255, 0.7);
   width: 400px;
@@ -1215,14 +1306,14 @@ export default {
 }
 
 .industry-section {
-  padding: 80px 0;
-  background-image: url(../views/photos/IndexViewbag23.jpg);
+  background-image: url(../views/photos/modelserve-background.png);
   background-size: 100% 100%;
   background-position: center;
   background-repeat: no-repeat;
   position: relative;
   overflow: hidden;
-  min-height: 800px;
+  height: 670px;
+  width: 1925px;
 }
 
 .industry-header {
@@ -1231,12 +1322,15 @@ export default {
 }
 
 .industry-main-title {
-  font-size: 68px;
-  font-weight: normal;
+  font-size: 48px;
+  font-weight: 600;
   color: #333;
   margin-bottom: 20px;
   position: relative;
-  left: 350px;
+  left: 220px;
+  top: 100px;
+  font-family: 'Noto Sans SC', sans-serif;
+  letter-spacing: 3px;
 }
 
 .industry-tabs-container {
@@ -1251,18 +1345,21 @@ export default {
   margin: 0 auto;
   padding: 0 20px;
   position: relative;
-  left: 620px;
+  left: 375px;
+  top: 70px;
 
 }
 
 .industry-tab {
-  padding: 15px 25px;
+  padding: 15px 0;
   cursor: pointer;
   transition: all 0.3s ease;
-  font-size: 28px;
   color: #666;
   position: relative;
-  margin: 0 24px;
+  margin: 0 22px;
+  font-family: 'Noto Sans SC', sans-serif;
+  font-size: 24px;
+  font-weight: 600;
 }
 
 .industry-tab.active {
@@ -1274,7 +1371,7 @@ export default {
   content: '';
   position: absolute;
   bottom: -1px;
-  left: 0;
+  left: 0px;
   width: 100%;
   height: 3px;
   background: #3874FB;
@@ -1292,7 +1389,8 @@ export default {
   justify-content: space-between;
   gap: 60px;
   position: relative;
-  left: 730px;
+  left: 650px;
+  top: 52px;
 }
 
 .industry-text-content {
@@ -1301,23 +1399,23 @@ export default {
 }
 
 .industry-detail-title {
-  font-size: 46px;
-  font-weight: normal;
   color: #333;
   margin-bottom: 30px;
+   font-size: 30px;
+  font-weight: 600;
+  font-family: 'Noto Sans SC', sans-serif;
 }
 
 .industry-detail-desc {
-  font-size: 32px;
-  line-height: 1.8;
+  font-size: 20px;
+  line-height: 1.6;
   color: #666;
-  margin-bottom: 40px;
+  font-weight: normal;
+  font-family: 'Noto Sans SC', sans-serif;
 }
 
 .industry-btn {
-  padding: 18px 50px;
-  font-size: 32px;
-  background: 
+background: 
     linear-gradient(90deg, rgba(15, 64, 64, 0), rgba(86, 118, 237, 1)),
     linear-gradient(90deg, rgba(184, 134, 248, 1), rgba(184, 134, 134, 0));
   color: #FFFFFF;
@@ -1328,6 +1426,12 @@ export default {
   font-weight: 500;
   letter-spacing: 1px;
   box-shadow: 0 4px 15px rgba(86, 118, 237, 0.4);
+  padding: 8px 18px;
+  font-size: 18px;
+  position: absolute;
+  top: 232px;
+
+  
 }
 
 .industry-btn:hover {
@@ -1353,25 +1457,12 @@ export default {
 }
 
 .models-section {
-  padding: 80px 0;
-  background: #F5F8FF;
+  padding: 100px 0;
+  background: #EDF3FD;
+  width: 1925px;
   position: relative;
   overflow: hidden;
-  min-height: 1400px; /* 增加高度以确保图片完整显示 */
-}
-
-.models-section::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url(../views/photos/IndexViewbag24.jpg);
-  background-size: 100% auto; /* 宽度占满，高度按比例 */
-  background-position: center top;
-  background-repeat: no-repeat;
-  z-index: 0;
+  height: 910px; /* 增加高度以确保图片完整显示 */
 }
 
 .section-header, .models-content {
@@ -1386,26 +1477,28 @@ export default {
 }
 
 .model-tabs-container {
-  border-bottom: 1px solid #e0e0e0;
-  margin-bottom: 60px;
+
+  margin-top: 120px;
+
 }
 
 .model-tabs {
   display: flex;
   justify-content: center;
-  max-width: 2800px;
   margin: 0 auto;
-  padding: 0 160px;
 }
 
 .model-tab {
-  padding: 15px 25px;
+  padding: 10px 27px;
+  margin: 0 35px;
   cursor: pointer;
   transition: all 0.3s ease;
-  font-size: 28px;
   color: #666;
   position: relative;
-  margin: 0 90px;
+  font-family: 'Noto Sans SC', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+
 }
 
 .model-tab.active {
@@ -1424,10 +1517,7 @@ export default {
   margin: 0 auto;
   padding: 0 20px;
   position: relative;
-  left: -410px;
-  top: 100px;
-
-
+  top: 95px;
 }
 
 .model-detail-content {
@@ -1438,22 +1528,23 @@ export default {
 }
 
 .model-detail-title {
-  font-size: 46px;
-  font-weight: normal;
   color: #333;
-  margin-bottom: 30px;
+  font-size: 36px;
+  font-weight: 600;
+  font-family: 'Noto Sans SC', sans-serif;
+  
 }
-
 .model-detail-desc {
-  font-size: 32px;
-  line-height: 1.8;
+  font-size: 20px;
+  line-height: 1.6;
   color: #666;
-  margin-bottom: 40px;
+  font-weight: normal;
+  font-family: 'Noto Sans SC', sans-serif;
+  margin-top: 35px;
+  width: 400px;
 }
 
 .model-btn {
-  padding: 18px 50px;
-  font-size: 32px;
   background: 
     linear-gradient(90deg, rgba(15, 64, 64, 0), rgba(86, 118, 237, 1)),
     linear-gradient(90deg, rgba(184, 134, 248, 1), rgba(184, 134, 134, 0));
@@ -1465,6 +1556,11 @@ export default {
   font-weight: 500;
   letter-spacing: 1px;
   box-shadow: 0 4px 15px rgba(86, 118, 237, 0.4);
+  padding: 8px 18px;
+  font-size: 18px;
+  position: absolute;
+  top: 330px;
+
 }
 
 .model-btn:hover {
