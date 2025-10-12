@@ -338,7 +338,7 @@ export default {
   min-width: 0;
   background-color: #FFFFFF;
   z-index: 99999;
-  height: 1270px;
+  height: 90vh;
   padding: 30px;
   box-sizing: border-box;
   border-radius: 20px;
@@ -430,19 +430,19 @@ export default {
 }
 
 .title-text {
-  font-size: 56px;
+  font-size: clamp(40px, 2.9vw, 70px);
   color:#000000;
   font-weight: 600;
 }
 
 .eye-icon {
   cursor: pointer;
-  font-size: 50px;
+  font-size: clamp(35px, 2.6vw, 65px);
   color: #7a6a9a;
 }
 
 .account-status {
-  font-size: 30px;
+  font-size: clamp(20px, 1.6vw, 38px);
   color: #7a6a9a;
 }
 
@@ -452,14 +452,14 @@ export default {
 }
 
 .currency {
-  font-size: 88px;
+  font-size: clamp(60px, 4.6vw, 110px);
   color: #333333;
   margin-right: 4px;
   font-weight: 600;
 }
 
 .amount {
-  font-size: 88px;
+  font-size: clamp(60px, 4.6vw, 110px);
   font-weight: 500;
   color: #333333;
 }
@@ -476,7 +476,7 @@ export default {
 }
 
 .account-type {
-  font-size: 30px;
+  font-size: clamp(20px, 1.6vw, 38px);
   color: #5a4a7a;
 }
 
@@ -485,17 +485,17 @@ export default {
   color: #333;
   border: 1px solid #e0e0e0;
   border-radius: 35px 0 0 35px;
-  padding: 18px 36px;
-  font-size: 32px;
+  padding: clamp(12px, 0.9vw, 22px) clamp(24px, 1.9vw, 42px);
+  font-size: clamp(22px, 1.7vw, 40px);
   font-weight: 500;
   cursor: pointer;
   transition: all 0.3s ease;
   position: relative;
   z-index: 2;
   margin-right: -36px;
-  padding-right: 50px;
+  padding-right: clamp(35px, 2.6vw, 55px);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  min-height: 60px;
+  min-height: clamp(42px, 3.1vw, 70px);
 }
 
 .bind-account-btn:hover {
@@ -512,7 +512,7 @@ export default {
 /* 资金流水 */
 .transaction-section {
   margin-top: 0;
-  height: 700px;
+  height: 70vh;
   border-bottom-left-radius: 400px;
 }
 
@@ -524,7 +524,7 @@ export default {
 }
 
 .section-header h3 {
-  font-size: 30px;
+  font-size: clamp(20px, 1.6vw, 38px);
   font-weight: 600;
   color: #333;
   margin: 0;
@@ -533,14 +533,14 @@ export default {
 .filter-tabs {
   display: flex;
   align-items: center;
-  gap: 24px;
+  gap: clamp(16px, 1.25vw, 30px);
 }
 
 .tab {
-  font-size: 30px;
+  font-size: clamp(20px, 1.6vw, 38px);
   color: #666;
   cursor: pointer;
-  padding: 6px 0;
+  padding: clamp(4px, 0.3vw, 8px) 0;
   border-bottom: 2px solid transparent;
   transition: all 0.3s ease;
   position: relative;
@@ -550,19 +550,19 @@ export default {
   color: #333;
   border-bottom-color: #6c5ce7;
   font-weight: 500;
-  font-size: 30px;
+  font-size: clamp(20px, 1.6vw, 38px);
 }
 
 .dropdown-tab {
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: clamp(3px, 0.2vw, 6px);
   cursor: pointer;
   position: relative;
 }
 
 .dropdown-arrow {
-  font-size: 30px;
+  font-size: clamp(20px, 1.6vw, 38px);
   color: #666;
   transition: transform 0.3s ease;
 }
@@ -658,8 +658,8 @@ export default {
 }
 
 .transaction-icon {
-  width: 48px;
-  height: 48px;
+  width: clamp(35px, 2.5vw, 60px);
+  height: clamp(35px, 2.5vw, 60px);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -687,8 +687,8 @@ export default {
 /* SVG图标样式 - 调整大小让图标在圆形中居中 */
 .expense-icon svg,
 .income-icon svg {
-  width: 32px;
-  height: 32px;
+  width: clamp(22px, 1.7vw, 40px);
+  height: clamp(22px, 1.7vw, 40px);
   display: block;
 }
 
@@ -712,7 +712,7 @@ export default {
   color: #6c5ce7;
   border: none;
   padding: 0;
-  font-size: 30px;
+  font-size: clamp(20px, 1.6vw, 38px);
   cursor: pointer;
   transition: color 0.3s ease;
   white-space: nowrap;
@@ -731,7 +731,7 @@ export default {
 }
 
 .col-type {
-  font-size: 30px;
+  font-size: clamp(20px, 1.6vw, 38px);
   color: #333;
   font-weight: 500;
   width: 100px;
@@ -739,19 +739,19 @@ export default {
 }
 
 .col-desc {
-  font-size: 30px;
+  font-size: clamp(20px, 1.6vw, 38px);
   color:  #333;
   width: 180px;
 }
 
 .col-date {
-  font-size: 30px;
+  font-size: clamp(20px, 1.6vw, 38px);
   color:  #333;
 }
 
 .col-amount {
   text-align: right;
-  font-size: 30px;
+  font-size: clamp(20px, 1.6vw, 38px);
   color:  #333;
 }
 
@@ -760,7 +760,7 @@ export default {
 }
 
 .amount-value {
-  font-size: 30px;
+  font-size: clamp(20px, 1.6vw, 38px);
   font-weight: 600;
 }
 
@@ -797,18 +797,19 @@ export default {
   flex-shrink: 0;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 25px;
   position: relative;
   left: 10px;
+  height: 90vh;
 }
 
 .consumption-detail {
   background: white;
   border-radius: 12px;
-  padding: 24px;
+  padding: 30px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   border: 1px solid #e8e8e8;
-  min-height: 730px;
+  flex: 1;
   display: flex;
   flex-direction: column;
 }
@@ -816,18 +817,20 @@ export default {
 .bank-cards {
   background: white;
   border-radius: 12px;
-  padding: 24px;
+  padding: 30px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   border: 1px solid #e8e8e8;
-  min-height: 520px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .consumption-detail h3,
 .bank-cards h3 {
-  font-size: 40px;
+  font-size: clamp(28px, 2.1vw, 50px);
   font-weight: 600;
   color: #333;
-  margin: 0 0 20px 0;
+  margin: 0 0 clamp(14px, 1.05vw, 25px) 0;
 }
 
 .user-info {
@@ -839,17 +842,17 @@ export default {
 }
 
 .user-avatar {
-  width: 120px;
-  height: 120px;
+  width: clamp(85px, 6.3vw, 150px);
+  height: clamp(85px, 6.3vw, 150px);
   border-radius: 50%;
   background: #333;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 18px;
+  font-size: clamp(12px, 0.9vw, 22px);
   position: relative;
   left: 40%;
-  top: 20px;
+  top: clamp(14px, 1.05vw, 25px);
 }
 
 .user-avatar.apple-icon {
@@ -864,17 +867,17 @@ export default {
 }
 
 .username {
-  font-size: 20px;
+  font-size: clamp(14px, 1.05vw, 25px);
   color:  #666;
   font-weight: 500;
-  margin-bottom: 6px;
+  margin-bottom: clamp(4px, 0.3vw, 8px);
 
 }
 
 .user-amount {
-  font-size: 30px;
+  font-size: clamp(20px, 1.6vw, 38px);
   color:#333;
-  margin-left: -25px;
+  margin-left: clamp(-16px, -1.3vw, -28px);
 }
 
 .detail-items {
@@ -892,24 +895,24 @@ export default {
 }
 
 .detail-icon {
-  width: 22px;
-  height: 22px;
+  width: clamp(15px, 1.15vw, 28px);
+  height: clamp(15px, 1.15vw, 28px);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size:40px;
+  font-size: clamp(28px, 2.1vw, 50px);
   opacity: 0.7;
 }
 
 .detail-item .label {
-  font-size: 23px;
+  font-size: clamp(16px, 1.2vw, 29px);
   color: #666;
-  min-width: 80px;
-  margin-left: 6px;
+  min-width: clamp(56px, 4.2vw, 100px);
+  margin-left: clamp(4px, 0.3vw, 8px);
 }
 
 .detail-item .value {
-  font-size: 23px;
+  font-size: clamp(16px, 1.2vw, 29px);
   color: #333;
   font-weight: 500;
   flex: 1;
@@ -940,13 +943,13 @@ export default {
 }
 
 .bank-icon {
-  width: 32px;
-  height: 32px;
+  width: clamp(22px, 1.7vw, 40px);
+  height: clamp(22px, 1.7vw, 40px);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 16px;
+  font-size: clamp(10px, 0.8vw, 20px);
   color: white;
 }
 
@@ -964,7 +967,7 @@ export default {
 
 .bank-name {
   flex: 1;
-  font-size: 30px;
+  font-size: clamp(20px, 1.6vw, 38px);
   color: #333;
   font-weight: 400;
 }
@@ -972,10 +975,10 @@ export default {
 .action-link {
   background: none;
   border: none;
-  font-size: 30px;
+  font-size: clamp(20px, 1.6vw, 38px);
   cursor: pointer;
   text-decoration: underline;
-  padding: 6px 8px;
+  padding: clamp(4px, 0.3vw, 8px) clamp(5px, 0.4vw, 10px);
   border-radius: 4px;
   transition: all 0.3s ease;
 }
