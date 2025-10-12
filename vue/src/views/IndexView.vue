@@ -187,9 +187,9 @@
             <div>邮箱: support@modao.cc</div>
           </div>
           <div class="social-links">
-            <a href="#" class="social-link"><i class="el-icon-s-home"></i></a>
-            <a href="#" class="social-link"><i class="el-icon-chat-dot-round"></i></a>
-            <a href="#" class="social-link"><i class="el-icon-share"></i></a>
+            <a href="#" class="social-link"><img src="./photos/weiboicon.png" alt="" class="weiboicon"></a>
+            <a href="#" class="social-link"><img src="./photos/weixinicon.png" alt="" class="weixinicon"></a>
+            <a href="#" class="social-link"><img src="./photos/Twittericon.png" alt="" class="Twittericon"></a>
           </div>
         </div>
         <div class="footer-links">
@@ -1185,7 +1185,7 @@ export default {
 .company-info {
   
   position: relative;
-  left: 0px;
+  left: 55px;
 }
 
 .company-name {
@@ -1204,17 +1204,27 @@ export default {
 .contact-info div {
   margin-bottom: 10px;
 }
-
+.el-icon-s-home{
+  size: 10px;
+}
 .social-links {
   display: flex;
-  gap: 30px;
+  gap: 20px;
   margin-top: 30px;
 }
-
+.weiboicon{
+  width: 25px;
+}
+.weixinicon{
+  width: 25px;
+}
+.Twittericon{
+  width: 25px;
+}
 .social-link {
-  width: 40px;
-  height: 40px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  width: 70px;
+  height: 50px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -1238,7 +1248,6 @@ export default {
   display: flex;
   flex-direction: column;
   position: relative;
-  left: 200px;
   margin-left: 200px;
   width: 200px;
 }
@@ -1265,7 +1274,7 @@ export default {
 .footer-bottom {
   position: absolute;
   bottom: 0;
-  left: 0;
+  left: 55px;
   right: 0;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   padding: 20px 0;
