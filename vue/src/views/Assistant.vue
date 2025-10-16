@@ -191,13 +191,13 @@ header {
 }
 
 .header-title img {
-  width: 3.5vw;
-  height: 3.5vw;
+  width: clamp(50px, 3.5vw, 80px);
+  height: clamp(50px, 3.5vw, 80px);
   margin-right: 1rem;
 }
 
 .header-title h1 {
-  font-size: 2.25rem;
+  font-size: clamp(28px, 2.25rem, 48px);
   font-weight: 600;
   color: #1f2937;
 }
@@ -207,8 +207,8 @@ header {
   color:rgba(151, 78, 250, 1);
   border: none;
   border-radius: 999px;
-  padding: 0.5rem 1rem;
-  font-size: 2rem;
+  padding: clamp(6px, 0.5rem, 12px) clamp(12px, 1rem, 20px);
+  font-size: clamp(24px, 2rem, 40px);
   display: flex;
   align-items: center;
   cursor: pointer;
@@ -220,8 +220,8 @@ header {
 }
 
 .discover-btn img {
-  width: 2vw;
-  height: 2vw;
+  width: clamp(28px, 2vw, 48px);
+  height: clamp(28px, 2vw, 48px);
   margin-right: 0.8rem;
 }
 
@@ -277,8 +277,8 @@ header {
 }
 
 .card-header img {
-  width: 4vw;
-  height: 4vw;
+  width: clamp(56px, 4vw, 90px);
+  height: clamp(56px, 4vw, 90px);
   margin-right: 1rem;
   background-color: white;
   border-radius: 0.8rem;
@@ -286,13 +286,13 @@ header {
 }
 
 .card-header h3 {
-  font-size: 2rem;
+  font-size: clamp(24px, 2rem, 42px);
   font-weight: 600;
   color: #1f2937;
 }
 
 .card-description {
-  font-size: 1.56rem;
+  font-size: clamp(18px, 1.56rem, 32px);
   color: #6b7280;
   line-height: 1.6;
   flex: 1;
@@ -303,7 +303,7 @@ header {
   line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
-  height: 4rem;
+  height: clamp(48px, 4rem, 80px);
   white-space: normal;
   text-overflow: ellipsis;
   word-break: break-word;
@@ -315,8 +315,8 @@ header {
   color: #7c3aed;
   border: 2px solid rgba(206, 206, 206, 1);
   border-radius: 1.8rem;
-  padding: 0.9rem 1.2rem;
-  font-size: 1.5rem;
+  padding: clamp(12px, 0.9rem, 18px) clamp(15px, 1.2rem, 24px);
+  font-size: clamp(18px, 1.5rem, 30px);
   font-weight: 500;
   display: flex;
   align-items: center;
@@ -331,7 +331,7 @@ header {
 }
 
 .card-button span {
-  font-size: 1.625rem;
+  font-size: clamp(20px, 1.625rem, 32px);
   margin-right: 8px;
 }
 
@@ -342,8 +342,8 @@ header {
 }
 
 .card-button .svg-icon svg {
-  width: 1.625rem;
-  height: 1.625rem;
+  width: clamp(20px, 1.625rem, 32px);
+  height: clamp(20px, 1.625rem, 32px);
 }
 
 .card-button:hover {
@@ -361,14 +361,14 @@ header {
 }
 
 .finance-title img {
-  width: 3.5vw;
-  height: 3.5vw;
+  width: clamp(50px, 3.5vw, 80px);
+  height: clamp(50px, 3.5vw, 80px);
   margin-right: 1rem;
   border-radius: 0.8rem;
 }
 
 .finance-title h2 {
-  font-size: 2.25rem;
+  font-size: clamp(28px, 2.25rem, 48px);
   font-weight: 600;
   color: #1f2937;
 }
@@ -401,8 +401,8 @@ header {
 }
 
 .finance-card .card-header img {
-  width: 4vw;
-  height: 4vw;
+  width: clamp(56px, 4vw, 90px);
+  height: clamp(56px, 4vw, 90px);
   margin-right: 1rem;
   background-color: white;
   border-radius: 0.8rem;
@@ -410,13 +410,13 @@ header {
 }
 
 .finance-card .card-header h3 {
-  font-size: 2rem;
+  font-size: clamp(24px, 2rem, 42px);
   font-weight: 600;
   color: #1f2937;
 }
 
 .finance-card .card-description {
-  font-size: 1.56rem;
+  font-size: clamp(18px, 1.56rem, 32px);
   color: #6b7280;
   line-height: 1.6;
   flex: 1;
@@ -427,7 +427,7 @@ header {
   line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
-  height: 4rem;
+  height: clamp(48px, 4rem, 80px);
   white-space: normal;
   text-overflow: ellipsis;
   word-break: break-word;
@@ -439,8 +439,8 @@ header {
   color: #4299e1;
   border: 2px solid rgba(206, 206, 206, 1);
   border-radius: 1.8rem;
-  padding: 0.9rem 1.2rem;
-  font-size: 1.5rem;
+  padding: clamp(12px, 0.9rem, 18px) clamp(15px, 1.2rem, 24px);
+  font-size: clamp(18px, 1.5rem, 30px);
   font-weight: 500;
   display: flex;
   align-items: center;

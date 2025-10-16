@@ -1,7 +1,11 @@
 <template>
   <sidebar-layout active-tab="home">
-   <!-- 用户信息区域 -->
-      <div class="user-info-section">
+   
+      <div class="two-column-layout">
+        <!-- 左侧内容区域 -->
+        <div class="content-wrapper">
+
+          <div class="user-info-section">
         <div class="user-header">
           <div class="user-avatar">
             <img src="@/views/photos/AiAssistant图片 5.png" alt="用户头像" class="avatar-img">
@@ -28,10 +32,6 @@
           <span class="announcement-date">2025/07/15</span>
         </div>
       </div>
-
-      <div class="two-column-layout">
-        <!-- 左侧内容区域 -->
-        <div class="content-wrapper">
           <!-- 我的助手 -->
           <div class="my-assistants-section">
             <div class="section-header">
@@ -294,24 +294,29 @@ export default {
 
 
 .two-column-layout {
-  display: grid;
-  grid-template-columns: 1fr 300px;
-  grid-gap: 25px;
-  margin-top: 25px;
+  display: flex;
+  gap: clamp(20px, 1.5vw, 40px);
+  margin-top: clamp(15px, 1.3vw, 35px);
+  width: 100%;
+  box-sizing: border-box;
+  align-items: flex-start;
 }
 
 .content-wrapper {
   display: grid;
   grid-template-columns: 1fr;
-  grid-gap: 25px;
-  width: 1370px;
+  grid-gap: clamp(15px, 1.5vw, 30px);
+  width: 70%;
+  flex: 1;
 }
 
 /* 右侧区域样式 */
 .right-sidebar {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: clamp(15px, 1.5vw, 30px);
+  width: 30%;
+  flex-shrink: 0;
 }
 
 /* 广告区域样式 */
@@ -321,19 +326,16 @@ export default {
   background-position: center;
   background-repeat: no-repeat;
   border-radius: 16px;
-  padding: 25px;
+  padding: clamp(15px, 1.8vw, 35px);
   color: white;
   text-align: center;
-  height: 18vh!important;
-  width: 285%;
+  height: 18vh;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   box-shadow: 0 8px 20px rgba(108, 92, 231, 0.3);
   overflow: hidden;
-  position: relative;
-  top: -19vh;
-  right: 15.6vw;
 }
 
 .ad-content h3 {
@@ -357,7 +359,6 @@ export default {
   position: relative;
   top: -330px;
   width: 850px;
-  left: -550px;
 }
 
 .section-header {
@@ -411,13 +412,11 @@ export default {
 .wallet-section {
   background: white;
   border-radius: 12px;
-  padding: 15px;
+  padding: clamp(11px, 1.1vw, 21px);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   border: 1px solid #f0f0f0;
   position: relative;
-  top: -18vh;
-  width: 285%;
-  right: 15.6vw;
+  width: 100%;
   height: 19vh;
 }
 
@@ -515,14 +514,12 @@ export default {
 .my-collections-right-section {
   background: #fff;
   border-radius: 16px;
-  padding: 25px;
+  padding: clamp(15px, 1.8vw, 35px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   border: 1px solid #eaeaea;
-  margin-bottom: 25px;
+  margin-bottom: 0;
   position: relative;
-  top: -17vh;
-  width: 285%;
-  right: 15.6vw;
+  width: 100%;
   height: 50vh;
 }
 
@@ -567,15 +564,15 @@ export default {
 
 .user-info-section {
   background: linear-gradient(135deg, #e0e7ff, #f0e0ff);
-  padding: 25px;
+  padding: clamp(15px, 1.8vw, 35px);
   border-radius: 16px;
-  margin-bottom: 25px;
+  margin-bottom: 0;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   border: 1px solid #eaeaea;
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  width: 68%;
+  gap: clamp(12px, 1.4vw, 28px);
+  width: 100%;
   height: 18vh;
 }
 
@@ -764,13 +761,11 @@ export default {
 .my-assistants-section {
   background: #fff;
   border-radius: 16px;
-  padding: 25px;
-  margin-bottom: 25px;
+  padding: clamp(15px, 1.8vw, 35px);
+  margin-bottom: 0;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   border: 1px solid #eaeaea;
-  width: 150%;
-  position: relative;
-  top: 1vh;
+  width: 100%;
   height: 38vh;
 }
 
@@ -810,15 +805,13 @@ export default {
 .daily-recommendations-section {
   background: #fff;
   border-radius: 16px;
-  padding: 25px;
-  margin-bottom: 25px;
+  padding: clamp(15px, 1.8vw, 35px);
+  margin-bottom: clamp(15px, 1.8vw, 35px);
   grid-column: 1 / 2;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   border: 1px solid #eaeaea;
-  width: 150%;
-  height: 32vh;
-  position: relative;
-  top: -8.6vh;
+  width: 100%;
+  height: 30vh;
 }
 
 .recommendations-grid {
@@ -834,7 +827,7 @@ export default {
   overflow: hidden;
   background-color: #f9fafc;
   position: relative;
-  top: 40px;
+  top: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
